@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do list</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="liststyle.css">
-    <title>To Do List</title>
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Indie+Flower&family=Pacifico&family=Playfair+Display:ital@1&family=Satisfy&display=swap" rel="stylesheet">
 
-<body>
-    <h1 class="heading">TO DO LIST</h1>
-    <div class="box">
-        <div class="container">
-            <input id="inputField" type="text"><button id="addToDo">+</button>
-            <div class="to-dos" id="toDoContainer">
-            </div>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="personal logo1.png" alt="">
+        <h6>SJ Designs</h6>
+      </div>
+      <div class="todo-app">
+        <h2>
+          To-do list
+          <i class="fa-solid fa-clipboard-list"></i>
+        </h2>
+        <div class="input">
+          <input id="inputBox" placeholder="Enter your text " type="text" />
+          <button onkeypress="addKeyTask()" onclick="addTask()" type="button">Add</button>
         </div>
+        <div class="mini-container">
+          <ul id="listContainer">
+            
+          </ul>
+        </div>
+      </div>
     </div>
-    <div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-    </div>
-    <h3 class="heading">Made with ❤️ by khushii</h3>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
