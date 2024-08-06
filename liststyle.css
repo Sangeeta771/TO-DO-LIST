@@ -1,158 +1,215 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
-.box {
-    background-color: rgb(91, 36, 36);
-    height: 400px;
-    border-radius: 15px;
-    width: 340px;
-    background-color: #0d0d5c;
-    box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    max-width: 100%;
-    margin: auto;
-}
 
-body {
-    width: 50%;
-    margin-left: 300px;
-    font-family: 'Fira Sans', sans-serif;
-    font-family: 'Source Code Pro', monospace;
-}
-
-.heading {
-    margin-left: 270px;
-    font-family: 'Fira Sans', sans-serif;
-    font-family: 'Source Code Pro', monospace;
-}
-
-h3 {
-    margin-top: 100px;
-    align-items: center;
-    text-decoration-style: dotted;
-}
-
-.container {
-    width: 350px;
-}
-
-#inputField {
-    margin-left: 10px;
-    width: 250px;
-    height: 30px;
-    border-radius: 50px;
-    border: 3px solid black;
-    font: size 16px;
-    vertical-align: middle;
-    font-family: 'Fira Sans', sans-serif;
-    font-family: 'Source Code Pro', monospace;
-}
-
-#addToDo {
-    background: #5E5DF0;
-    border-radius: 999px;
-    box-shadow: #5E5DF0 0 10px 20px -10px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    opacity: 1;
-    outline: 0 solid transparent;
-    padding: 8px 18px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: fit-content;
-    word-break: break-word;
-    border: 0;
-    margin-left: 10px;
-    margin-top: 10px;
-}
-
-.to-dos {
-    margin-top: 25px;
-
-}
-
-.paragraph-styling {
+*{
     margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+/* 
+font-family: 'Caveat', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Satisfy', cursive; */
+
+.container{
+    
+    width: 100%;
+    height: fot4;
+    min-width: 320px;
+    min-height: 100vh;
+    background: linear-gradient(135deg,pink,purple);
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+} 
+
+
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    height: 60px;
+    
+}
+
+.logo::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border:  transparent; /* Initial border */
+    border-radius: 10px;
+    animation: neonBorder 1.5s infinite alternate; /* Neon animation */
+}
+
+@keyframes neonBorder {
+    from {
+        border-color: transparent;
+        box-shadow: 0 0 5px rgba(19, 20, 19, 0.7), 0 0 10px yellow transparent;
+    }
+    to {
+        border-color: transparent;
+        box-shadow: 0 0 20px purple, 0 0 30px whitesmoke;
+    }
+}
+
+.logo img{
+    align-self: center;
+    width: 60px;
+    height: 40px;
+}
+.logo h6{
+    font-family: 'Pacifico', cursive;
+}
+
+.todo-app{
+    margin: 100px 0 40px 0;
+    min-width: 300px;
+    height: fit-content;
+    min-height: 100px;
+    color: black;
+    padding: 20px;
+    border-radius: 20px;
+    min-height: 40px;
+    width: 70vw;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Glass effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow */
+
+}
+
+.todo-app h2{
+    font-family:'Playfair Display' ;
+    font-size: 30px;
+}
+
+
+
+ button {
+    font-family: "Satisfy";
+    font-weight: 600;
+
+}
+
+input{
+    font-family: 'Caveat';
+font-weight: 600;
+font-size: 25px;
+color: gray !important;
+
+}
+
+ul li p{
+font-family: 'Caveat';
+font-weight: 600;
+font-size: 25px;
+color: black !important;
+}
+
+
+.input input{
+    margin-top: 10px;
+    width: 95%;
+    background-color: ;
+    border: none ;
+    outline: none;
+    padding: 6.7px;
+    padding-right: 50px;
+    border-radius: 20px;
+    
+}
+.input button{
+    
+    margin-top: 10px;
+    position: absolute;
+    background-color: pink;
+    border: none ;
+    outline: none;
+    padding: 13px 20px 13px  ;
+    border-radius: 25px;
+    margin-left: -50px;
+}
+
+.mini-container{
+    /* height: fit-content; */
+    padding: 20px;
+
+    
+}
+
+.mini-container li{
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    list-style: none;
+}
+
+ul li{
+    display: flex;
+    align-items: center;
+}
+
+#checkbox{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #aaa;
+    display: inline-block;
     cursor: pointer;
-    font-size: 20px;
-    color: rgb(23, 156, 108);
-    margin-left: 10px;
+
 }
 
-/* css for body animetion  */
-body {
-    margin: auto;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    overflow: auto;
-    background: linear-gradient(315deg, rgba(101, 0, 94, 1) 3%, rgba(60, 132, 206, 1) 38%, rgba(48, 238, 226, 1) 68%, rgba(255, 25, 25, 1) 98%);
-    animation: gradient 15s ease infinite;
-    background-size: 400% 400%;
-    background-attachment: fixed;
+#checkbox{
+    width: 40px;
+    height: 40px;
+    border: 2px solid pink;
+    border-radius: 50%;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 0%;
-    }
-
-    50% {
-        background-position: 100% 100%;
-    }
-
-    100% {
-        background-position: 0% 0%;
-    }
+ul li::before{
+    margin: 0px 10px 0px 0px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url(unchecked.png);
+    background-size: contain;
+}
+li.checked p{
+    text-decoration: line-through;
 }
 
-.wave {
-    background: rgb(255 255 255 / 25%);
-    border-radius: 1000% 1000% 0 0;
-    position: fixed;
-    width: 200%;
-    height: 12em;
-    animation: wave 10s -3s linear infinite;
-    transform: translate3d(0, 0, 0);
-    opacity: 0.8;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
+ul li.checked::before {
+    background-image: url(checked.png);
+    background-size: contain;
 }
 
-.wave:nth-of-type(2) {
-    bottom: -1.25em;
-    animation: wave 18s linear reverse infinite;
-    opacity: 0.8;
+li p{
+    flex: 1;
 }
 
-.wave:nth-of-type(3) {
-    bottom: -2.5em;
-    animation: wave 20s -1s reverse infinite;
-    opacity: 0.9;
+#cross {
+    display: inline-block;
+    width: 30px; /* Adjust the width to match the icon size */
+    height: 30px; /* Adjust the height to match the icon size */
+    text-align: center;
+    line-height: 30px; /* Center the icon vertically */
+    background-color: transparent;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+    margin-right: 2.5vw;
+
 }
 
-@keyframes wave {
-    2% {
-        transform: translateX(1);
-    }
-
-    25% {
-        transform: translateX(-25%);
-    }
-
-    50% {
-        transform: translateX(-50%);
-    }
-
-    75% {
-        transform: translateX(-25%);
-    }
-
-    100% {
-        transform: translateX(1);
-    }
+#cross:hover {
+    background-color: pink; /* Gray background on hover */
 }
